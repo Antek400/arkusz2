@@ -1,0 +1,56 @@
+*{
+    font-family: Georgia;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+    background: linear-gradient(to bottom, #A0522D, #F5DEB3);
+}
+
+main {
+    background-color: wheat;
+    padding: 50px;
+}
+
+footer {
+    padding: 30px;
+    background: linear-gradient(to bottom,#F5DEB3, #A0522D)
+}
+
+a {
+    background-color: sienna;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+nav {
+  background-color: wheat;
+  padding: 14px;
+  text-align: center;
+}
+
+table, td {
+  border: 1px solid sienna;
+  border-collapse: collapse;
+}
+
+table {
+    width: 70%;
+    margin: 0 auto;
+}
+
+td {
+    padding: 5px;
+}

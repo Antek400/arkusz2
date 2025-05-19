@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator kosztów</title>
+    <link rel="stylesheet" href="style.css">
+
+        <script>
+            function obliczKoszt() {
+  const d = parseFloat(dlugosc.value);
+  const s = parseFloat(szerokosc.value);
+  const panel = document.querySelector('input[name="panel"]:checked');
+  const wynik = document.getElementById("wynik");
+
+  if (d && s && panel) {
+    const cennik = { laminowany: 12, winylowy: 14, deska: 18 };
+    const pole = d * s;
+    const koszt = pole * cennik[panel.value];
+    wynik.textContent = `Pole powierzchni pomieszczenia: ${pole.toFixed(2)} m2, koszt montażu: ${koszt.toFixed(2)} zł`;
+  } else {
+    wynik.textContent = "Wprowadź poprawne dane.";
+  }
+}
+
+        </script>
+
+
+</head>
+<body> 
+
+    <header>
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+
+    <nav>
+        <a href="index.html">Strona głowna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </nav>
+
+    <main>
+        <h1>Kalkulator kosztów montażu</h1>
+        <label>Szerokość pomieszczenia [m]: <input type="text" id="szerokosc"></label>
+        <label>Długość pomieszczenia [m]: <input type="text" id="dlugosc"></label>
+            <br>
+        <br><a>Typ panelu</a><br>
+            <br>
+        <label><input type="radio" name="panel" id="lam" value="laminowany">Panele laminowane<br></label>
+        <label><input type="radio" name="panel" id="win" value="winylowy">Panele winylowe<br></label>
+        <label><input type="radio" name="panel" id="des" value="deska">Deska podłogowa<br></label>
+        <br>
+        <button onclick="obliczKoszt()">Oblicz</button>
+        <p id="wynik"></p>
+        
+    </main>
+
+    <footer>
+        <h5>Autor strony:000000000</h5>
+    </footer>
+</body>
+</html>
